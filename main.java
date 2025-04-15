@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
-public class main {
-    public void SetMusica(String musica){
+public class Main {
+    private static String musica;
+
+    public static void SetMusica(String musica){
         this.musica = musica;
     }
 
-    public String getMusica(){
+    public static String getMusica(){
         return musica;
     }
 
@@ -94,7 +96,7 @@ public class main {
     }
 
     public static void pausar(){
-        Srtring musica = getMusica();
+        String musica = getMusica();
         System.out.println("Música pausada:");
         System.out.println("1 - Tocar: " + musica);
         System.out.println("2 - Voltar para a seleção de musica");
