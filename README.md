@@ -13,7 +13,6 @@ Este projeto é um sistema multifuncional implementado em Java, que simula três
 ### 📞 Módulo de Aparelho Telefônico
 
 - Realizar ligações
-- Atender chamadas
 - Acessar correio de voz
 
 ### 🌐 Módulo de Navegação na Internet
