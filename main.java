@@ -2,6 +2,15 @@ import javax.swing.JOptionPane;
 
 public class Main {
     private static String musica;
+    private static String [3][6] paginas;
+    
+    public stativ void setMatriz(int linha, int coluna, String valor){
+        paginas[linha][coluna] = valor;
+    } 
+
+    public static String getMatriz (int linha, int coluna){
+        return paginas[linha][coluna];
+    }
 
     public static void setMusica(String musica){
         Main.musica = musica;
@@ -12,6 +21,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
+         for (int i = 0; i <= 6 ; i++){
+            setMtriz(1, i, "Adicionar pagina " + i);
+        }
+
         menu();
     }
 
@@ -140,5 +153,42 @@ public class Main {
     }
 
     
-    public static void navegador(){}
+    public static void navegador(){
+        int opcao = Integer.parseInt(JOptionPane.showInputDialog(null, "Navegador de Internet:"+
+        "\n1 - Visualizar páginas"+
+        "\n2 - Ver os favoritos"+
+        "\n0 - Voltar"));
+    
+        switch (opcao) {
+            case 1: visualizarPaginas(); break;
+            case 2: verFavoritos(); break;
+            case 0: menu(); return;
+            default:
+                JOptionPane.showMessageDialog(null, "Opção inválida!");
+                navegador();
+                return;
+        }
+    }
+
+    public static void visuallizarPaginas(){
+        int opcao = Integer.parseInt(JOptionPane.showInputDialog(null, "Viauslizar Páginas:"+
+        for(int i = 0; i <=6 ; i++){
+            String pag = getMatriz(1, i);
+            return "\n" + i+ " " + pag + ;
+        }
+        "\n0 - Voltar"));
+
+        switch (opcao) {
+            case 1: visualizador("pagina1"); break;
+            case 2: visualizador("pagina2"); break;
+            case 3: visualizador("pagina3"); break;
+            case 0: navegador(); return;
+            default:
+                JOptionPane.showMessageDialog(null, "Opção inválida!");
+                navegador();
+                return;
+        }
+    }
+
+    public static void visualizador(){}
 }
