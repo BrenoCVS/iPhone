@@ -179,9 +179,12 @@ public class Main {
         "\n0 - Voltar"));
 
         switch (opcao) {
-            case 1: visualizador("pagina1"); break;
-            case 2: visualizador("pagina2"); break;
-            case 3: visualizador("pagina3"); break;
+            case 1: visualizador(1); break;
+            case 2: visualizador(2); break;
+            case 3: visualizador(3); break;
+            case 4: visualizador(4); break;
+            case 5: visualizador(5); break;
+            case 6: visualizador(6); break;
             case 0: navegador(); return;
             default:
                 JOptionPane.showMessageDialog(null, "Opção inválida!");
@@ -190,5 +193,7 @@ public class Main {
         }
     }
 
-    public static void visualizador(){}
+    public static void visualizador(int pag){
+        
+    }
 }
